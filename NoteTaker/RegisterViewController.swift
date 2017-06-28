@@ -46,9 +46,8 @@ class RegisterViewController : UIViewController {
         return randomString
     }
     
+    //4 times
     func hashAlgorithm(val : String) -> Data {
-        
-        
         var initial = sha256(string: val)! as Data
         for i in 0..<4 {
             var backToString = initial.map { String(format: "%02x", $0) }.joined()
@@ -59,20 +58,28 @@ class RegisterViewController : UIViewController {
     
     @IBAction func doneClicked(_ sender: Any) {
         
-        print(hashAlgorithm(val: "PatrickLi"))
-        
         var userName = self.nameTextField.text!
         var key = self.key.text!
         
         var input = userName + self.secret
         var output = self.hashAlgorithm(val: input)
         var outputString = output.map { String(format: "%02x", $0) }.joined()
+        
         print(outputString)
         
         if(outputString == self.key.text){
-            print("hiboi")
+            emojiEnabled = true
+            let alert = UIAlertController(title: "Success", message: "You can now save emojis!", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (action: UIAlertAction!) in
+                self.performSegue(withIdentifier: "goBackToHome", sender: self)
+            }))
+            self.present(alert, animated: true, completion: nil)
         }
-        print("failure")
+        let alert = UIAlertController(title: "Failure", message: "Wrong Username or Key", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (action: UIAlertAction!) in
+            self.performSegue(withIdentifier: "goBackToHome", sender: self)
+        }))
+        self.present(alert, animated: true, completion: nil)
         
         
         /*if(self.nameTextField.text != "") {

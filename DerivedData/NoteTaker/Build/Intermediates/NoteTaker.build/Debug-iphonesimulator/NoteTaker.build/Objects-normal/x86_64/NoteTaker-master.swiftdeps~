@@ -1,11 +1,11 @@
 version: "Apple Swift version 3.1 (swiftlang-802.0.53 clang-802.0.42)"
 options: "d85a42cc0e1ef1bbe59b5d9001df116f"
-build_time: [552004798, 130372000]
+build_time: [552005520, 416453000]
 inputs:
   "/Users/pali/Downloads/EncryptedNoteTaker-master/NoteTaker/NewNoteViewController.swift": [552001542, 0]
   "/Users/pali/Downloads/EncryptedNoteTaker-master/Note+CoreDataClass.swift": [552001542, 0]
   "/Users/pali/Downloads/EncryptedNoteTaker-master/NoteTaker/NoteTakerViewController.swift": [552001542, 0]
-  "/Users/pali/Downloads/EncryptedNoteTaker-master/NoteTaker/RegisterViewController.swift": [552004798, 0]
+  "/Users/pali/Downloads/EncryptedNoteTaker-master/NoteTaker/RegisterViewController.swift": [552005520, 0]
   "/Users/pali/Downloads/EncryptedNoteTaker-master/NoteTaker/AppDelegate.swift": [552001542, 0]
   "/Users/pali/Downloads/EncryptedNoteTaker-master/NoteTaker/RNCryptor.swift": [552001542, 0]
   "/Users/pali/Downloads/EncryptedNoteTaker-master/DerivedData/NoteTaker/Build/Intermediates/NoteTaker.build/Debug-iphonesimulator/NoteTaker.build/DerivedSources/CoreDataGenerated/License/License+CoreDataClass.swift": [552002802, 0]
